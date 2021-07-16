@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="../../adx_monaco/min/vs/loader.js"></script>
+    <script async src="../js/pseo.js"></script>
+    <link href="../css/monacoEditor.css" rel="stylesheet" type="text/css" />
+    <script>
+      "use strict";
+      function setClientApiContext(xrm, formContext) {
+        require.config({
+          paths: { vs: "../../adx_monaco/min/vs" },
+          "vs/nls": {
+            availableLanguages: {
+              "*": mal.pseo.MonacoEditorCreator.getLanguageCode(),
+            },
+          },
+        });
+
+        require(["vs/editor/editor.main"], function () {
+          mal.pseo.MonacoEditorCreator.setUpEditor(formContext, xrm, monaco);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
