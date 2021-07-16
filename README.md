@@ -1,4 +1,4 @@
-# Portals-Source-Editing-Optimizer
+# Portals Source Editing Optimizer
 
 A tool for Power Apps Portals that aims to improve the coding experience for entity/basic forms, web/advanced form steps and web templates.
 
